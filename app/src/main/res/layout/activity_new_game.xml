@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewGame">
+
+
+    <LinearLayout
+        android:id="@+id/RightSide"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Spinner
+            android:id="@+id/GameType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:spinnerMode="dialog"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+        <EditText
+            android:id="@+id/MagScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="20dp"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:text="Enter Score"
+            android:inputType = "numberPassword"
+            android:textColor="#688A8181"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/DPScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="20dp"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:inputType = "numberPassword"
+            android:text="Enter Score"
+            android:textColor="#688A8181"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LeftSide"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/GameTypePrompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Game Type:" />
+
+        <TextView
+            android:id="@+id/MagPrompt"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Mag Score:" />
+
+        <TextView
+            android:id="@+id/DPPrompt"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="DP Score:" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/SubmitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="submit"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LeftSide" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
